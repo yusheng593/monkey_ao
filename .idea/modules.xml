@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/monkey_ao.iml" filepath="$PROJECT_DIR$/monkey_ao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/android/monkey_ao_android.iml" filepath="$PROJECT_DIR$/android/monkey_ao_android.iml" />
+    </modules>
+  </component>
+</project>
