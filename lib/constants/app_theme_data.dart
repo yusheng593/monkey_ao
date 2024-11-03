@@ -9,14 +9,26 @@ class AppThemeData {
       elevation: 1,
     ),
     scaffoldBackgroundColor: AppColors.scaffoldBackgroundColor,
+    colorScheme: ColorScheme.light(
+      primary: AppColors.titleColor,
+      primaryContainer: AppColors.textColor,
+      surface: AppColors.scaffoldBackgroundColor,
+      surfaceContainer: AppColors.appBarBackgroundColor,
+    ),
   );
 
   static final ThemeData darkTheme = ThemeData.dark().copyWith(
-    appBarTheme: const AppBarTheme(
-      backgroundColor: Color(0xFF3A3A3A),
-      foregroundColor: Color(0xFFDADADA),
+    appBarTheme: AppBarTheme(
+      backgroundColor: AppColors.dartAppBarBackgroundColor,
+      foregroundColor: AppColors.dartTitleColor,
       elevation: 1,
     ),
     scaffoldBackgroundColor: const Color(0xFF2C2C2C),
+    colorScheme: ColorScheme.dark(
+      primary: AppColors.dartTitleColor,
+      primaryContainer: AppColors.dartTextColor,
+      surface: AppColors.dartScaffoldBackgroundColor,
+      surfaceContainer: AppColors.dartAppBarBackgroundColor,
+    ),
   );
 }

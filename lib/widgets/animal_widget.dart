@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:monkey_ao/constants/app_colors.dart';
 import 'package:monkey_ao/model/animals_model.dart';
 import 'package:monkey_ao/screens/animal_details.dart';
 import 'package:monkey_ao/service/init_getit.dart';
@@ -38,13 +37,16 @@ class AnimalWidget extends ConsumerWidget {
                   child: Container(
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(20),
-                      color: const Color(0xFFA5B68D).withOpacity(0.8),
+                      color: Theme.of(context)
+                          .colorScheme
+                          .surfaceContainer
+                          .withOpacity(0.8),
                     ),
                     padding: const EdgeInsets.all(10),
                     child: Text(
                       animalModel.nameCh,
                       style: TextStyle(
-                          color: AppColors.titleColor,
+                          color: Theme.of(context).colorScheme.primary,
                           fontSize: 18,
                           fontWeight: FontWeight.bold),
                     ),
