@@ -24,7 +24,7 @@ class CachedImageWidget extends StatelessWidget {
       imageUrl: imgUrl ?? AppConstants.animalImage,
       fit: boxFit ?? BoxFit.cover,
       errorWidget: (context, url, error) => Image.asset(
-        'images/noImage.png',
+        'images/under_construction.jpeg',
         fit: BoxFit.cover,
       ),
     );

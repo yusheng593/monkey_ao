@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:monkey_ao/constants/app_colors.dart';
 import 'package:monkey_ao/model/animals_model.dart';
 import 'package:monkey_ao/screens/animal_details.dart';
 import 'package:monkey_ao/service/init_getit.dart';
@@ -42,8 +43,8 @@ class AnimalWidget extends ConsumerWidget {
                     padding: const EdgeInsets.all(10),
                     child: Text(
                       animalModel.nameCh,
-                      style: const TextStyle(
-                          color: Color(0xFFF6FCDF),
+                      style: TextStyle(
+                          color: AppColors.titleColor,
                           fontSize: 18,
                           fontWeight: FontWeight.bold),
                     ),
