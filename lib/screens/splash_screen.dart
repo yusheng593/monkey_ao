@@ -1,9 +1,8 @@
 import 'dart:developer';
 
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:monkey_ao/constants/app_colors.dart';
+import 'package:lottie/lottie.dart';
 import 'package:monkey_ao/screens/animals_screen.dart';
 import 'package:monkey_ao/service/init_getit.dart';
 import 'package:monkey_ao/service/navigation_service.dart';
@@ -37,10 +36,11 @@ class SplashScreen extends ConsumerWidget {
           errorText: error.toString(),
           retryFunction: () => ref.refresh(initProvider));
     }, loading: () {
-      return Transform.scale(
-        scale: 2,
-        child: CupertinoActivityIndicator(
-          color: AppColors.titleColor,
+      return Center(
+        child: Lottie.asset(
+          'animation/loading.json',
+          width: 100,
+          height: 100,
         ),
       );
     });
