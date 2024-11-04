@@ -184,4 +184,12 @@ class AnimalsModel {
       'a_cid': cid,
     };
   }
+
+  // 建立一個 getter 將界門綱目科作為清單傳回
+  List<String> get animalTaxonomyList => [
+        phylum,
+        classType,
+        order,
+        family,
+      ];
 }

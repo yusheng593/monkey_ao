@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:monkey_ao/model/animals_model.dart';
 import 'package:monkey_ao/widgets/cached_image_widget.dart';
 import 'package:monkey_ao/widgets/favorite_button_widget.dart';
+import 'package:monkey_ao/widgets/taxonomy_list_widget.dart';
 
 class AnimalDetails extends ConsumerWidget {
   const AnimalDetails({super.key, required this.animalModel});
@@ -49,6 +50,13 @@ class AnimalDetails extends ConsumerWidget {
                                         Theme.of(context).colorScheme.primary,
                                     fontSize: 30,
                                     fontWeight: FontWeight.w600),
+                              ),
+                              const SizedBox(
+                                height: 8,
+                              ),
+                              TaxonomyListWidget(
+                                animalTaxonomyList:
+                                    animalModel.animalTaxonomyList,
                               ),
                               const SizedBox(
                                 height: 8,
