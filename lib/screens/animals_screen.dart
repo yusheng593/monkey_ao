@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:monkey_ao/constants/app_icons.dart';
 import 'package:monkey_ao/enums/theme_enum.dart';
+import 'package:monkey_ao/screens/favorites_screen.dart';
+import 'package:monkey_ao/service/init_getit.dart';
+import 'package:monkey_ao/service/navigation_service.dart';
 import 'package:monkey_ao/view_models/animal/animals_provider.dart';
 import 'package:monkey_ao/view_models/theme_provider.dart';
 import 'package:monkey_ao/widgets/animal_widget.dart';
@@ -16,6 +19,14 @@ class AnimalScreen extends StatelessWidget {
         centerTitle: true,
         title: const Text('臺北市立動物園'),
         actions: [
+          IconButton(
+              onPressed: () {
+                getIt<NavigationService>().navigate(const FavoritesScreen());
+              },
+              icon: const Icon(
+                AppIcons.favoriteRounded,
+                color: Colors.red,
+              )),
           Consumer(
             builder: (BuildContext context, WidgetRef ref, Widget? _) {
               final themeState = ref.watch(themeProvider);

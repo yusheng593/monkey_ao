@@ -116,7 +116,7 @@ class AnimalDetails extends ConsumerWidget {
                             borderRadius: BorderRadius.circular(20),
                           ),
                           width: 100,
-                          child: const FavoriteButtonWidget(),
+                          child: FavoriteButtonWidget(animalModel),
                         ),
                       )
                     ],
